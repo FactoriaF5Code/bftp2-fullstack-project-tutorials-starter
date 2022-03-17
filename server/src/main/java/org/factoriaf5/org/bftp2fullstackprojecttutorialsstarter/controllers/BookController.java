@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
-import java.util.Scanner;
 
 @RestController
 public class BookController {
