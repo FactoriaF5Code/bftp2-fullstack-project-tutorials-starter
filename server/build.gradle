@@ -23,6 +23,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-devtools:2.6.4'
 }
 
+jar {
+    enabled = false
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
