@@ -29,6 +29,9 @@ public class BookController {
     @PostConstruct
     @Profile("!prod")
     private void loadSampleData() {
+        if (bookRepository.findAll().isEmpty()) {
+            return;
+        }
         bookRepository.saveAll(List.of(
                 new Book("Mujeres, Raza y Clase", "Angela Y. Davis"),
                 new Book("El problema del trabajo", "Kathi Weeks"),
